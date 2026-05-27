@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Programación Funcional 1.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagenes/icono.png" type="image/png">
+    
+</head>
+<body>
+    <h1><span class="amarillo">JavaScript</span> - Inicio en la Programación Funcional.</h1>
+
+    <h3>¿Qué es la Programación funcional</h3>
+    <p>
+        La programación funcional es un paradigma de programación basado en el uso de funciones para resolver problemas y procesar datos. En <span class="amarillo">JavaScript</span>, este enfoque permite escribir código más claro , reutilizable y organizado, trabajando de una manera más declarativa.
+    </p>
+    <p>
+        Una de las ideas principales de la programación funcional es la <b>inmutabilidad</b>, es decir evitar modificar directamente los datos originales y trabajar creando nuevos datos a partir de ellos. Esto permite conservar la información incial como respaldo y evitar errores producidos por cambios inesperados en el programa.
+    </p>
+    <p>
+        <span class="amarillo">JavaScript</span> incorpora distintas herramientas relacionadas con este paradigma, y una de las primeras que se suellen utilizar es <span class="violeta">forEach</span><span class="dorado">()</span>.
+    </p>
+    <hr>
+    <br>
+    <h2>
+        Método <span class="violeta">forEach</span><span class="dorado">()</span>
+    </h2>
+    <p>
+        El método <span class="violeta">forEach</span><span class="dorado">()</span> permite recorrer cada elemento de un array ejectando una función sobre cada uno de ellos.
+    </p>
+    <p>
+        Su principal ventaja es que evita utilizar estructuras repetitivas tradicionales como <span class="violeta">for</span>, ofreciendo una sintaxis más moderna y legible.
+    </p>
+    <hr>
+    <br>
+    <b>Sintaxis básica</b>
+<pre><code class="cpp">     <span class="violeta">array</span><span class="rosa">.</span>forEach(<span class="rosa">function</span>(<span class="violeta">elemento</span>){
+    <span class="gris">//Intrucciones</span>
+    });</code></pre>
+
+    <fieldset>
+        <legend><span class="violeta"> forEach</span><span class="dorado">() </span></legend> 
+        Recorre automáticamente cada elemento del array y ejecuta la función indicada. El parámetro <span class="violeta">elemento</span> representa cada valor almacenado dentro del array.
+    </fieldset>
+    <b>
+        Ejemplo básico
+    </b>
+    <br>
+<pre><code class="cpp">     <span class="rosa">let</span> <span class="violeta">numeros</span> <span class="rosa">=</span> [<span class="naranaja">1</span>, <span class="naranja">2</span>, <span class="naranja">3</span>];
+
+    <span class="violeta">numeros</span><span class="rosa">.</span>forEach(<span class="violeta">numero</span> => {
+        <span class="violeta">console</span><span class="rosa">.</span>log(<span class="violeta">numero</span> <span class="rosa">*</span> <span class="naranja">2</span>);
+    });</code></pre>
+
+    <fieldset>
+        <p>
+            En este ejemplo, <span class="violeta">forEach</span><span class="dorado">()</span> recorrer cada elemento del array <span class="violeta">numeros</span> y muestra por consola el doble de cada valor. El array origital no se modifica, ya que únicamente se trabaja generando nuevos resultados a partir de sus datos. Este enfoque se relaciona con la idea de <b>inmutabilidad</b> utilizada en programación funcional.
+        </p>
+    </fieldset>
+    <br>
+    <h3>Comparación con <span class="rosa">for</span></h3>
+    <center>
+    <table>
+        <thead>
+            <tr> 
+                <th>Forma tradicional</th>
+                <th>Forma utilizando <span class="violeta">forEach</span><span class="dorada">()</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre><code class="cpp"> <span class="rosa">let</span> <span class="violeta">numeros</span> <span class="rosa">=</span> [<span class="naranja">1</span>, <span class="naranja">2</span>, <span class="naranja">3</span>];</span>
+                    
+<span class="rosa">for</span>(<span class="rosa">let</span> <span class="violeta">i</span> <span class="rosa">=</span> <span class="naranja">0</span>; <span class="violeta">i</span> <span class="rosa">&lt;</span> <span class="violeta">numeros</span><span class="rosa">.</span>length; <span class="violeta">i</span><span class="rosa">++</span>){
+    <span class="violeta">console</span><span class="rosa">.</span>log(<span class="violeta">numeros</span>[<span class="violeta">i</span>] <span class="rosa">*</span> <span class="naranja">2</span>);
+}</code></pre>
+                </td>
+                <td>
+<pre><code class="cpp"> <span class="rosa">let</span> <span class="violeta">numeros</span> <span class="rosa">=</span> [<span class="naranja">1</span>, <span class="naranja">2</span>, <span class="naranja">3</span>];</span>
+                    
+<span class="violeta">numeros</span><span class="rosa">.</span>forEach(<span class="violeta">numeros</span><span class="rosa">.</span>length; <span class="violeta">numero</span>=>{
+    <span class="violeta">console</span><span class="rosa">.</span>log(<span class="violeta">numeros</span><span class="rosa">*</span> <span class="naranja">2</span>);
+})</code></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </center>
+    <br>
+    <div class="center">
+    <p>
+        <i>
+            Con <span class="violeta">forEach</span><span class="dorado">()</span> ya no es necesario controlar índices ni condiciones de repetición manualmente. El código resulta más simple, limpio y fácil de interpretar.
+        </i>
+    </p>
+    </div>
+    <br>
+    <hr>
+    <br>
+</body>
+</html>
+
